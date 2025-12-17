@@ -1,0 +1,234 @@
+.header {
+  display: flex;
+  width: 1fr;
+  padding: 20px 48px 20px 56px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--Foundation-green-green-500, #1c8582);
+}
+
+.logo {
+  color: var(--white, #fff);
+  font-family: bagel-fat-one, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.button {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Aptos;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btn-login {
+  border-radius: 16px;
+  background: var(--Foundation-green-green-50, #e8f3f3);
+  color: var(--Foundation-green-green-800, #0f4948);
+  text-align: center;
+  font-family: Aptos;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.main {
+  width: 1fr;
+  height: 1024px;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.box-content {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 72px;
+}
+
+.illustration {
+  width: 480px;
+  height: 560px;
+  border-radius: 24px;
+  background-image: url("../assets/mellow-poster.png");
+}
+
+.right-content {
+  display: flex;
+  width: 736px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.headline {
+  width: 100%;
+  display: flex;
+  /* padding: 8px; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--Foundation-grey-blue-purple-700, #31333d);
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.group-title-field {
+  display: flex;
+  width: 720px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.title-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.label-field {
+  color: #000;
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.box-field {
+  height: 71px;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid #808080;
+  padding: 0 16px;
+  font-size: 20px;
+  font-family: Aptos;
+}
+.text-button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-label {
+  width: 360px;
+  color: #000;
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btn-create {
+  display: flex;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #e6e6e6;
+  color: #737373;
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: not-allowed;
+  /* pointer-events: none; */
+}
+
+.btn-create.active {
+  background: var(--Foundation-green-green-500, #1c8582);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  width: 1fr;
+  height: 106px;
+  padding: 16px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background: var(--Foundation-green-green-500, #1c8582);
+  color: var(--white, #fff);
+}
+
+.footer-content {
+  display: flex;
+  height: 64px;
+  padding: 12px 80px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  font-family: Aptos;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.social-media {
+  display: flex;
+  padding: 8px;
+  align-items: flex-start;
+  gap: 20px;
+}
+.twitter {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/icon-24px/prime_twitter.png");
+}
+.instagram {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/icon-24px/instagram.png");
+}
+.facebook {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/icon-24px/facebook.png");
+}
+
+.footer-list {
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+}
+
+.footer-text {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.copyrights {
+  text-align: right;
+}
