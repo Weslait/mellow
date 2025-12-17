@@ -1,0 +1,214 @@
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.header {
+  display: flex;
+  width: 1fr;
+  padding: 20px 48px 20px 56px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--Foundation-green-green-500, #1c8582);
+}
+
+.logo {
+  color: var(--white, #fff);
+  font-family: bagel-fat-one, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.button {
+  display: flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Aptos;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btn-login {
+  border-radius: 16px;
+  background: var(--Foundation-green-green-50, #e8f3f3);
+  color: var(--Foundation-green-green-800, #0f4948);
+  text-align: center;
+  font-family: Aptos;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.main {
+  /* margin-top: 10%; */
+  width: 1fr;
+  height: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.section-1 {
+  display: flex;
+  width: 1fr;
+  flex-direction: column;
+  align-items: center;
+  gap: 125px;
+}
+
+.h1-subtitle-button {
+  display: flex;
+  width: 993px;
+  flex-direction: column;
+  align-items: center;
+  gap: 57px;
+}
+
+.h1-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  align-self: center;
+  color: var(--Foundation-grey-blue-purple-700, #31333d);
+  text-align: center;
+  font-family: Aptos;
+  font-size: 108px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+  margin-bottom: 52px;
+}
+
+i {
+  color: var(--Foundation-grey-blue-purple-700, #31333d);
+  font-family: "source-serif-pro", serif;
+  font-size: 108px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 100px;
+}
+
+.subtitle {
+  margin-top: 52px;
+  color: var(--Foundation-grey-blue-purple-500, #454856);
+  text-align: center;
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-cta {
+  display: flex;
+  padding: 13px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  background: var(--Foundation-yellow-yellow-500, #f8ce61);
+}
+
+.infinite-band-wrapper {
+  overflow: hidden;
+  width: 1fr;
+  white-space: nowrap;
+}
+
+.infinite-band {
+  display: inline-flex;
+  align-items: center;
+  gap: 80px;
+  align-self: center;
+  color: var(--Foundation-grey-blue-purple-900, #1d1e24);
+  font-family: bagel-fat-one, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  animation: scroll-left 33s linear infinite;
+}
+
+footer {
+  display: flex;
+  width: 1fr;
+  height: 106px;
+  padding: 16px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background: var(--Foundation-green-green-500, #1c8582);
+  color: var(--white, #fff);
+}
+
+.footer-content {
+  display: flex;
+  height: 64px;
+  padding: 12px 80px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  font-family: Aptos;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.social-media {
+  display: flex;
+  padding: 8px;
+  align-items: flex-start;
+  gap: 20px;
+}
+.twitter {
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/icon-24px/prime_twitter.png");
+}
+.instagram {
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/icon-24px/instagram.png");
+}
+.facebook {
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/icon-24px/facebook.png");
+}
+
+.footer-list {
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+}
+
+.footer-text {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.copyrights {
+  text-align: right;
+}
