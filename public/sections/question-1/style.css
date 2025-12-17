@@ -365,6 +365,15 @@
 }
 
 /* Section 5 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .box-content-5 {
   position: relative;
   margin-top: 5%;
@@ -380,6 +389,7 @@
 .loading-container {
   display: flex;
   justify-content: center;
+  flex: 1;
   width: 100%;
 }
 .loading-img {
@@ -389,6 +399,7 @@
   background-position: center;
   width: 150px;
   height: 150px;
+  animation: spin 4s linear infinite;
 }
 
 /* Footer */
@@ -461,4 +472,11 @@ footer {
 
 .copyrights {
   text-align: right;
+}
+
+.box-content-2,
+.box-content-3,
+.box-content-4,
+.box-content-5 {
+  display: none;
 }
