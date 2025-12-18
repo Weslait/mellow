@@ -35,6 +35,7 @@ let choiceOne = document.querySelector("#choice-1");
 let choiceTwo = document.querySelector("#choice-2");
 let choiceThree = document.querySelector("#choice-3");
 
+// object to acquire the user choices
 let userChoices = {
   avatar: null,
   mood: null,

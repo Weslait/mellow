@@ -23,6 +23,10 @@
   font-size: 40px;
 }
 
+.link-decoration {
+  text-decoration: none;
+}
+
 .button {
   display: flex;
   padding: 16px 32px;

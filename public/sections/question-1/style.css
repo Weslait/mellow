@@ -22,6 +22,10 @@
   background: var(--Foundation-green-green-500, #1c8582);
 }
 
+.link-decoration {
+  text-decoration: none;
+}
+
 .logo {
   color: var(--white, #fff);
   font-family: bagel-fat-one, sans-serif;
@@ -538,6 +542,35 @@
   width: 56px;
   height: 24px;
   background-image: url("../../assets/icon-24px/streaming.png");
+}
+
+.cta-sentence {
+  position: absolute;
+  bottom: -72px;
+  width: 960px;
+  color: var(--Foundation-grey-blue-purple-700, #31333d);
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+a {
+  color: var(--Foundation-grey-blue-purple-700, #31333d);
+  text-align: center;
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
 /* Footer */
