@@ -47,21 +47,19 @@
       <section class="box-content">
         <div class="illustration"></div>
         <div class="right-content">
-          <div class="headline">
-            Crée un compte pour retrouver le contenu qui t’a été suggéré.
-          </div>
+          <h1 class="headline">Rejoins la famille !</h1>
           <div class="group-title-field">
             <div class="title-field">
               <div class="label-field">Choisi un nom d’utilisateur</div>
-              <input class="box-field" type="text" />
+              <input class="box-field" id="username" type="text" />
             </div>
             <div class="title-field">
               <div class="label-field">Saisi un mot de passe</div>
-              <input class="box-field" type="password" />
+              <input class="box-field" id="password" type="password" />
             </div>
             <div class="title-field">
               <div class="label-field">Quel âge as-tu ?</div>
-              <input class="box-field" type="date" />
+              <input class="box-field" id="date" type="date" />
             </div>
           </div>
           <div class="text-button">
@@ -71,6 +69,30 @@
         </div>
       </section>
     </div>
+    <div id="popup-overlay" class="popup-overlay-bg">
+      <div class="popup-login">
+        <div class="btn-close"></div>
+        <div class="logo-popup">Mellow</div>
+        <div class="group-field">
+          <div class="label-field-username">Nom d'utilisateur</div>
+          <input
+            class="field"
+            id="username"
+            type="text"
+            placeholder="Nom d'utilisateur"
+          />
+          <div class="label-field-password">Mot de passe</div>
+          <input
+            class="field"
+            id="username"
+            type="password"
+            placeholder="Mot de passe"
+          />
+          <div class="btn-connect">Se connecter</div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="footer-content">
         <div class="social-media">
