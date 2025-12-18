@@ -1,3 +1,4 @@
+// Display the sections
 const steps = [
   document.querySelector(".box-content"),
   document.querySelector(".box-content-2"),
@@ -24,13 +25,13 @@ buttonNext.forEach((btn) => {
         setTimeout(() => {
           steps[4].style.display = "none";
           steps[5].style.display = "block";
-          console.log("Résultats affichés avec succès !");
         }, 4000);
       }
     }
   });
 });
 
+// Retrieve the user choices
 let choiceOne = document.querySelector("#choice-1");
 let choiceTwo = document.querySelector("#choice-2");
 let choiceThree = document.querySelector("#choice-3");
@@ -126,4 +127,48 @@ formatChoiceThree.addEventListener("click", () => {
   userChoices.format = "any";
   console.log(userChoices.format);
   console.log(userChoices);
+});
+
+// Animation and selection - section 1
+const btnNext1 = document.querySelector(".box-content .btn-next");
+const avatarCards = document.querySelectorAll(".avatar-card");
+
+btnNext1.classList.add("disabled");
+
+avatarCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    avatarCards.forEach((c) => c.classList.remove("selected"));
+
+    card.classList.add("selected");
+
+    btnNext1.classList.remove("disabled");
+
+    if (card.id === "choice-1") userChoices.avatar = "happy";
+    if (card.id === "choice-2") userChoices.avatar = "neutral";
+    if (card.id === "choice-3") userChoices.avatar = "sad";
+  });
+});
+
+// Animation and selection - section 2
+
+const btnNext2 = document.querySelector(".box-content-2 .btn-next");
+const allPills = document.querySelectorAll(".pill");
+
+btnNext2.classList.add("disabled");
+
+allPills.forEach((pill) => {
+  pill.addEventListener("click", () => {
+    allPills.forEach((p) => p.classList.remove("is-selected"));
+    pill.classList.add("is-selected");
+
+    btnNext2.classList.remove("disabled");
+
+    if (pill.id === "pill-choice-1") userChoices.mood = "comedy";
+    else if (pill.id === "pill-choice-2") userChoices.mood = "chill";
+    else if (pill.id === "pill-choice-3") userChoices.mood = "think";
+    else if (pill.id === "pill-choice-4") userChoices.mood = "thriller";
+    else if (pill.id === "pill-choice-5") userChoices.mood = "drama";
+
+    console.log("Mood choisi :", userChoices.mood);
+  });
 });
