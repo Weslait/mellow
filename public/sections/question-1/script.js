@@ -4,6 +4,7 @@ const steps = [
   document.querySelector(".box-content-3"),
   document.querySelector(".box-content-4"),
   document.querySelector(".box-content-5"),
+  document.querySelector(".box-content-6"),
 ];
 
 const buttonNext = document.querySelectorAll(".btn-next");
@@ -18,32 +19,17 @@ buttonNext.forEach((btn) => {
 
     if (steps[stepIndex]) {
       steps[stepIndex].style.display = "block";
+
+      if (stepIndex === 4) {
+        setTimeout(() => {
+          steps[4].style.display = "none";
+          steps[5].style.display = "block";
+          console.log("Résultats affichés avec succès !");
+        }, 4000);
+      }
     }
   });
 });
-
-// let happy = 0;
-// let neutral = 0;
-// let sad = 0;
-
-// choiceOne.addEventListener("click", () => {
-//   happy = 1;
-//   neutral = 0;
-//   sad = 0;
-// });
-
-// choiceTwo.addEventListener("click", () => {
-//   happy = 0;
-//   neutral = 1;
-//   sad = 0;
-// });
-// choiceThree.addEventListener("click", () => {
-//   happy = 0;
-//   neutral = 0;
-//   sad = 1;
-// });
-
-// console.log(happy);
 
 let choiceOne = document.querySelector("#choice-1");
 let choiceTwo = document.querySelector("#choice-2");
@@ -138,4 +124,5 @@ formatChoiceTwo.addEventListener("click", () => {
 formatChoiceThree.addEventListener("click", () => {
   userChoices.format = "any";
   console.log(userChoices.format);
+  console.log(userChoices);
 });

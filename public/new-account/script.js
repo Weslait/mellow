@@ -23,6 +23,9 @@ inputs.forEach((input) => {
   input.addEventListener("input", checkInput);
 });
 
+const username = document.getElementById("username");
+const password = document.getElementById("password");
+
 // --- GESTION DE LA MODALE ---
 
 const btnLogin = document.querySelector(".btn-login"); // Le bouton du header
