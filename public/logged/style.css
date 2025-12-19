@@ -143,7 +143,6 @@
   align-items: center;
   border-radius: 12px;
   border: 2px dashed var(--Foundation-grey-blue-purple-200, #a9abb1);
-  background: #f7f8f8;
 }
 .empty-card {
   display: flex;
@@ -170,22 +169,13 @@
   border-radius: 12px;
 }
 
-#movie-saved-2 {
-  background: url("../assets/empty-choice-2.png");
-  background-size: cover;
-}
-
-#movie-saved-3 {
-  background: url("../assets/empty-choice-3.png");
-  background-size: cover;
-}
-
 .movie-poster {
   width: 296px;
   height: 400px;
   background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 12px;
 }
 

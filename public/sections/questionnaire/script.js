@@ -12,6 +12,32 @@ const buttonNext = document.querySelectorAll(".btn-next");
 
 let stepIndex = 0;
 
+buttonNext.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    steps[stepIndex].style.display = "none";
+
+    stepIndex++;
+
+    if (steps[stepIndex]) {
+      steps[stepIndex].style.display = "block";
+
+      if (stepIndex === 4) {
+        if (userChoices.format === "movie") {
+          getMoviesFromAPI();
+        } else if (userChoices.format === "tv_show") {
+          getSeriesFromAPI();
+        } else if (userChoices.format === "any") {
+          getMixedContentFromAPI();
+        }
+        setTimeout(() => {
+          steps[4].style.display = "none";
+          steps[5].style.display = "block";
+        }, 4000);
+      }
+    }
+  });
+});
+
 //  function shuffle
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -82,32 +108,6 @@ async function getMixedContentFromAPI() {
     );
   }
 }
-
-buttonNext.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    steps[stepIndex].style.display = "none";
-
-    stepIndex++;
-
-    if (steps[stepIndex]) {
-      steps[stepIndex].style.display = "block";
-
-      if (stepIndex === 4) {
-        if (userChoices.format === "movie") {
-          getMoviesFromAPI();
-        } else if (userChoices.format === "tv_show") {
-          getSeriesFromAPI();
-        } else if (userChoices.format === "any") {
-          getMixedContentFromAPI();
-        }
-        setTimeout(() => {
-          steps[4].style.display = "none";
-          steps[5].style.display = "block";
-        }, 4000);
-      }
-    }
-  });
-});
 
 // retrieve the user choices
 let choiceOne = document.querySelector("#choice-1");
