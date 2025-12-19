@@ -32,7 +32,7 @@ app.listen(port, () => {
 app.use(express.static("public"));
 
 // Auth
-const auth = require("./migration/auth");
+const auth = require("./routes/auth");
 
 // Routes d'authentification
 app.post("/api/register", auth.register);
