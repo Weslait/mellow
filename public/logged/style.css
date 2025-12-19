@@ -134,6 +134,33 @@
     0 6px 7.5px -5px rgba(0, 0, 0, 0.1);
 }
 
+.empty-choice {
+  display: flex;
+  width: 296px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px dashed var(--Foundation-grey-blue-purple-200, #a9abb1);
+  background: #f7f8f8;
+}
+.empty-card {
+  display: flex;
+  width: 296px;
+  height: 400px;
+  padding: 0 128px 0 124px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--Foundation-grey-blue-purple-300, #82848e);
+  font-family: Aptos;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .movie-card-saved {
   position: relative;
   width: 296px;
@@ -153,24 +180,13 @@
   background-size: cover;
 }
 
-.movie-card-saved:active {
-  position: relative;
-  width: 296px;
-  height: 400px;
-  border-radius: 12px;
-  border: 0.75px solid #e5e7eb;
-  background: #fff;
-  overflow: hidden;
-  box-shadow: 0 15px 19px -3.75px rgba(0, 0, 0, 0.1),
-    0 6px 7.5px -5px rgba(0, 0, 0, 0.1);
-}
-
 .movie-poster {
   width: 296px;
   height: 400px;
   background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 12px;
 }
 
 .icon-save {
@@ -211,7 +227,7 @@
 
 #genre,
 #year,
-#duration {
+#format {
   color: #6a7282;
   font-family: Aptos;
   font-size: 12px;
@@ -255,7 +271,7 @@
 .restart {
   align-self: center;
   display: flex;
-  padding: 4px 16px;
+  padding: 8px 16px;
   width: 280px;
   justify-content: center;
   align-items: center;
@@ -277,8 +293,8 @@
 }
 
 .icon-restart {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   background: url("../assets/logo-restart.png");
   background-position: center;
   background-repeat: no-repeat;
