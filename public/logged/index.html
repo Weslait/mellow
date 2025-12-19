@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tableau de bord</title>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "ssp2nsl",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="link-decoration" href="../../landing/index.html"
+        ><div class="logo">Mellow</div></a
+      >
+      <div class="button btn-login">Se déconnecter</div>
+    </header>
+    <div class="main">
+      <div class="page-content">
+        <section class="top-section">
+          <div class="top-headline-cards">
+            <div class="headline"></div>
+            <div class="box-selection">
+              <div class="box-header">
+                <div class="box-title">Tes recommandations du jour</div>
+              </div>
+              <div class="movie-cards" id="movie-recommended-1">
+                <div class="movie-card">
+                  <div class="icon-save"></div>
+                  <div class="movie-poster"></div>
+                  <div class="movie-description">
+                    <div class="card-content">
+                      <div class="top-card">
+                        <div id="genre">[genre]</div>
+                        <div id="year">[year]</div>
+                      </div>
+                      <div class="movie-title-box" id="movie-title">
+                        [title]
+                      </div>
+                      <div class="bot-card">
+                        <div id="duration">[duration]</div>
+                        <div id="platform"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="movie-card" id="movie-recommended-2">
+                  <div class="icon-save"></div>
+                  <div class="movie-poster"></div>
+                  <div class="movie-description">
+                    <div class="card-content">
+                      <div class="top-card">
+                        <div id="genre">[genre]</div>
+                        <div id="year">[year]</div>
+                      </div>
+                      <div class="movie-title-box" id="movie-title">
+                        [title]
+                      </div>
+                      <div class="bot-card">
+                        <div id="duration">[duration]</div>
+                        <div id="platform"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="movie-card" id="movie-recommended-3">
+                  <div class="icon-save"></div>
+                  <div class="movie-poster"></div>
+                  <div class="movie-description">
+                    <div class="card-content">
+                      <div class="top-card">
+                        <div id="genre">[genre]</div>
+                        <div id="year">[year]</div>
+                      </div>
+                      <div class="movie-title-box" id="movie-title">
+                        [title]
+                      </div>
+                      <div class="bot-card">
+                        <div id="duration">[duration]</div>
+                        <div id="platform"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="restart">
+            <div class="text-restart">
+              Recommencer
+              <div class="count">1</div>
+              <div>/3</div>
+              <div class="icon-restart"></div>
+            </div>
+            <div class="logo"></div>
+          </div>
+        </section>
+        <section class="bot-section">
+          <div class="box-selection-2">
+            <div class="box-header">
+              <div class="box-title">Ma Watchlist</div>
+            </div>
+            <div class="movie-cards">
+              <div class="movie-card-saved" id="movie-saved-1">
+                <div class="icon-save"></div>
+                <div class="movie-poster"></div>
+                <div class="movie-description">
+                  <div class="card-content">
+                    <div class="top-card">
+                      <div id="genre">[genre]</div>
+                      <div id="year">[year]</div>
+                    </div>
+                    <div class="movie-title-box" id="movie-title">[title]</div>
+                    <div class="bot-card">
+                      <div id="duration">[duration]</div>
+                      <div id="platform"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="movie-card-saved" id="movie-saved-2"></div>
+              <div class="movie-card-saved" id="movie-saved-3"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="social-media">
+          <div class="twitter"></div>
+          <div class="instagram"></div>
+          <div class="facebook"></div>
+        </div>
+        <div class="footer-list">
+          <div class="footer-text">Nous contacter</div>
+          <div class="footer-text">Termes d'utilisation</div>
+          <div class="footer-text">Politique de confidentialité</div>
+        </div>
+        <div class="copyrights">© 2025 Mellow</div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

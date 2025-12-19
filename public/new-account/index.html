@@ -40,7 +40,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">Mellow</div>
+      <a class="link-decoration" href="../../landing/index.html"
+        ><div class="logo">Mellow</div></a
+      >
       <div class="button btn-login">Se connecter</div>
     </header>
     <div class="main">
@@ -59,12 +61,14 @@
             </div>
             <div class="title-field">
               <div class="label-field">Quel âge as-tu ?</div>
-              <input class="box-field" id="date" type="date" />
+              <input class="box-field" id="age" type="date" />
             </div>
           </div>
           <div class="text-button">
             <div class="left-label">C’est tout pour nous !</div>
-            <div class="btn-create">Créer un compte</div>
+            <a href="../logged/index.html"
+              ><div class="btn-create">Créer un compte</div></a
+            >
           </div>
         </div>
       </section>
@@ -77,14 +81,14 @@
           <div class="label-field-username">Nom d'utilisateur</div>
           <input
             class="field"
-            id="username"
+            id="login-username"
             type="text"
             placeholder="Nom d'utilisateur"
           />
           <div class="label-field-password">Mot de passe</div>
           <input
             class="field"
-            id="password"
+            id="login-password"
             type="password"
             placeholder="Mot de passe"
           />

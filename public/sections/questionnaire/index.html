@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question 1</title>
+    <title>Question</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/uoj7lnu.css" />
     <!-- Typography from Adobe Font -->
@@ -42,7 +42,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">Mellow</div>
+      <a class="link-decoration" href="../../landing/index.html"
+        ><div class="logo">Mellow</div></a
+      >
       <div class="button btn-login">Se connecter</div>
     </header>
     <div class="main">
@@ -50,7 +52,6 @@
         <div class="box-selection">
           <div class="box-header">
             <div class="box-title">Choisis un avatar</div>
-            <div class="step">1 / 4</div>
           </div>
           <div class="avatar-container">
             <div class="avatar-card" id="choice-1">
@@ -70,7 +71,6 @@
         <div class="box-selection">
           <div class="box-header">
             <div class="box-title">Tu cherches à...</div>
-            <div class="step">2 / 4</div>
           </div>
           <div class="pill-container">
             <div class="pill-list">
@@ -98,7 +98,6 @@
         <div class="box-selection">
           <div class="box-header">
             <div class="box-title">Tu préfères voir quelque chose de...</div>
-            <div class="step">3 / 4</div>
           </div>
           <div class="style-container">
             <div class="style-card" id="card-choice-1">
@@ -106,7 +105,7 @@
               <div class="style-txt">simple à suivre</div>
             </div>
             <div class="style-card" id="card-choice-2">
-              <div class="avatar-img"><div class="avatar-5"></div></div>
+              <div class="style-img"><div class="avatar-5"></div></div>
               <div class="style-txt">complexe</div>
             </div>
             <div class="style-card" id="card-choice-3">
@@ -121,7 +120,6 @@
         <div class="box-selection">
           <div class="box-header">
             <div class="box-title">Une dernière question. Plutôt...</div>
-            <div class="step">4 / 4</div>
           </div>
           <div class="style-container">
             <div class="style-card" id="format-choice-1">
@@ -129,7 +127,7 @@
               <div class="style-txt">film</div>
             </div>
             <div class="style-card" id="format-choice-2">
-              <div class="avatar-img"><div class="avatar-8"></div></div>
+              <div class="style-img"><div class="avatar-8"></div></div>
               <div class="style-txt">série</div>
             </div>
             <div class="style-card" id="format-choice-3">
@@ -158,8 +156,8 @@
           <div class="box-header">
             <div class="box-title">Voici ta sélection personnalisée</div>
           </div>
-          <div class="movie-cards" id="movie-recommended-1">
-            <div class="movie-card">
+          <div class="movie-cards">
+            <div class="movie-card" id="movie-recommended-1">
               <div class="icon-save"></div>
               <div class="movie-poster"></div>
               <div class="movie-description">
@@ -168,9 +166,9 @@
                     <div id="genre">[genre]</div>
                     <div id="year">[year]</div>
                   </div>
-                  <div class="movie-title-box" id="movie-title">[title]</div>
+                  <div class="movie-title-box" id="movie-title-1">[title]</div>
                   <div class="bot-card">
-                    <div id="duration">[duration]</div>
+                    <div id="format">[format]</div>
                     <div id="platform"></div>
                   </div>
                 </div>
@@ -185,9 +183,9 @@
                     <div id="genre">[genre]</div>
                     <div id="year">[year]</div>
                   </div>
-                  <div class="movie-title-box" id="movie-title">[title]</div>
+                  <div class="movie-title-box" id="movie-title-2">[title]</div>
                   <div class="bot-card">
-                    <div id="duration">[duration]</div>
+                    <div id="format">[format]</div>
                     <div id="platform"></div>
                   </div>
                 </div>
@@ -202,14 +200,18 @@
                     <div id="genre">[genre]</div>
                     <div id="year">[year]</div>
                   </div>
-                  <div class="movie-title-box" id="movie-title">[title]</div>
+                  <div class="movie-title-box" id="movie-title-3">[title]</div>
                   <div class="bot-card">
-                    <div id="duration">[duration]</div>
+                    <div id="format">[format]</div>
                     <div id="platform"></div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="cta-sentence">
+            <a href="../../new-account/index.html">Connecte-toi</a> pour accéder
+            au contenu que tu as enregistré.
           </div>
         </div>
       </section>

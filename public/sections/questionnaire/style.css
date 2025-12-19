@@ -9,6 +9,18 @@
   }
 }
 
+@keyframes levitate {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .fade-in {
   animation: fadeInSlide 0.75s ease-out forwards;
 }
@@ -22,12 +34,22 @@
   background: var(--Foundation-green-green-500, #1c8582);
 }
 
+.link-decoration {
+  text-decoration: none;
+}
+
 .logo {
   color: var(--white, #fff);
   font-family: bagel-fat-one, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
+  transition: 0.35s;
+}
+
+.logo:hover {
+  transform: scale(1.07);
+  color: #f8ce61;
 }
 
 .button {
@@ -82,6 +104,12 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: all 0.3s ease;
+}
+
+.btn-next:hover {
+  background-color: #887135;
+  color: #fefaef;
 }
 
 /* Section 1 */
@@ -121,7 +149,6 @@
 
 .box-header {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   max-width: 864px;
@@ -150,6 +177,11 @@
   justify-content: center;
   align-items: center;
   gap: 32px;
+  transition: 0.45s;
+}
+
+.avatar-card:hover {
+  transform: scale(1.07);
 }
 
 .avatar-img {
@@ -243,7 +275,12 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  transition: 0.45s;
 }
+.pill:hover {
+  transform: scale(1.1);
+}
+
 .pill-orange {
   background: #c9783d;
   color: var(--white, #fff);
@@ -303,6 +340,11 @@
   border-radius: 24px;
   border: 0.75px solid var(--Foundation-grey-blue-purple-100, #c5c6cb);
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+  transition: 0.45s;
+}
+
+.style-img:hover {
+  transform: scale(1.07);
 }
 
 .style-txt {
@@ -450,6 +492,7 @@
   overflow: hidden;
   box-shadow: 0 15px 19px -3.75px rgba(0, 0, 0, 0.1),
     0 6px 7.5px -5px rgba(0, 0, 0, 0.1);
+  transition: 0.45s;
 }
 
 .movie-poster {
@@ -468,6 +511,11 @@
   width: 32px;
   height: 32px;
   background: url("../../assets/icon-24px/save.png");
+  transition: 0.45s;
+}
+
+.icon-save:hover {
+  transform: scale(1.25);
 }
 
 .movie-description {
@@ -499,7 +547,7 @@
 
 #genre,
 #year,
-#duration {
+#format {
   color: #6a7282;
   font-family: Aptos;
   font-size: 12px;
@@ -538,6 +586,35 @@
   width: 56px;
   height: 24px;
   background-image: url("../../assets/icon-24px/streaming.png");
+}
+
+.cta-sentence {
+  position: absolute;
+  bottom: -72px;
+  width: 960px;
+  color: var(--Foundation-grey-blue-purple-700, #31333d);
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+a {
+  color: var(--Foundation-grey-blue-purple-700, #31333d);
+  text-align: center;
+  font-family: Aptos;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
 /* Footer */
@@ -617,4 +694,42 @@ footer {
 .box-content-4,
 .box-content-5 {
   display: none;
+}
+
+/* Section 1 */
+.avatar-card.selected {
+  outline: 4px solid #f8ce61;
+  border-radius: 24px;
+  animation-name: levitate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.btn-next.disabled {
+  background: #ecedee;
+  color: #82848e;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Gestion des pills - section 2 */
+.pill.is-selected {
+  opacity: 1;
+}
+
+.pill-container:has(.is-selected) .pill:not(.is-selected) {
+  background: #82848e;
+  color: #fff;
+  opacity: 0.6;
+}
+
+/* Gestion des cards - section 3 et 4  */
+.style-card.selected .style-img {
+  outline: 4px solid #f8ce61;
+  border-radius: 24px;
+  animation-name: levitate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
