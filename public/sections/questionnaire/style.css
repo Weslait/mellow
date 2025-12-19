@@ -499,7 +499,6 @@
   width: 296px;
   height: 400px;
   background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  /* background: url("https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
 }

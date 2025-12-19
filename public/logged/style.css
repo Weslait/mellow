@@ -288,6 +288,11 @@
   background: url("../assets/logo-restart.png");
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.45s;
+}
+
+.icon-restart:hover {
+  transform: rotate(360deg);
 }
 
 /* Bot section */
