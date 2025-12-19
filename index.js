@@ -55,18 +55,6 @@ app.get('/api/genres', async (req, res) => {
     }
 });
 
-// Recherche générale
-app.get('/api/search', async (req, res) => {
-    try {
-        const { q, type = 'multi', page = 1 } = req.query;
-        if (!q) return res.status(400).json({ success: false, message: 'Requête vide' });
-        
-        const result = await movieService.search(q, type, parseInt(page));
-        res.json(result);
-    } catch (error) {
-        res.status(500).json({ success: false, message: 'Erreur serveur' });
-    }
-});
 
 // Films avec filtres
 app.get('/api/movies', async (req, res) => {
@@ -121,26 +109,5 @@ app.get('/api/tv/:id', async (req, res) => {
         res.json(result);
     } catch (error) {
         res.status(404).json({ success: false, message: 'Série non trouvée' });
-    }
-});
-
-// Questionnaire - suggestions personnalisées
-app.post('/api/suggestions', async (req, res) => {
-    try {
-        const userAnswers = req.body;
-        
-        // Validation basique
-        if (!userAnswers || Object.keys(userAnswers).length === 0) {
-            return res.status(400).json({ 
-                success: false, 
-                message: 'Réponses du questionnaire requises' 
-            });
-        }
-        
-        const result = await movieService.getSuggestionsFromQuiz(userAnswers);
-        res.json(result);
-    } catch (error) {
-        console.error('Erreur suggestions:', error);
-        res.status(500).json({ success: false, message: 'Erreur génération suggestions' });
     }
 });

@@ -1,3 +1,4 @@
+
 // services/movieService.js
 require('dotenv').config();
 const axios = require('axios');
@@ -12,24 +13,6 @@ class MovieService {
             baseURL: TMDB_BASE_URL,
             params: { api_key: TMDB_API_KEY, language: 'fr-FR' }
         });
-    }
-
-    // Recherche générale
-    async search(query, type = 'multi', page = 1) {
-        try {
-            const response = await this.axiosInstance.get('/search/' + type, {
-                params: { query, page }
-            });
-            return {
-                success: true,
-                results: response.data.results,
-                total_pages: response.data.total_pages,
-                total_results: response.data.total_results
-            };
-        } catch (error) {
-            console.error('Erreur recherche TMDb:', error.message);
-            return { success: false, message: 'Erreur API' };
-        }
     }
 
     // Découvrir films avec filtres
@@ -100,36 +83,6 @@ class MovieService {
         }
     }
 
-    // Suggestions basées sur questionnaire
-    async getSuggestionsFromQuiz(userAnswers) {
-        try {
-            const filters = this.buildFiltersFromAnswers(userAnswers);
-            
-            // Si l'utilisateur veut films OU séries
-            if (userAnswers.content_type === 'movies') {
-                return await this.discoverMovies(filters);
-            } else if (userAnswers.content_type === 'tv') {
-                return await this.discoverTV(filters);
-            } else {
-                // Les deux
-                const [moviesResult, seriesResult] = await Promise.all([
-                    this.discoverMovies(filters),
-                    this.discoverTV(filters)
-                ]);
-                
-                return {
-                    success: true,
-                    movies: moviesResult.movies || [],
-                    series: seriesResult.series || [],
-                    type: 'mixed'
-                };
-            }
-        } catch (error) {
-            console.error('Erreur suggestions:', error.message);
-            return { success: false, message: 'Erreur génération suggestions' };
-        }
-    }
-
     // Liste des genres (pour ton frontend)
     async getGenres() {
         try {
@@ -147,52 +100,6 @@ class MovieService {
             console.error('Erreur genres:', error.message);
             return { success: false, message: 'Erreur API' };
         }
-    }
-
-    // Helper: Construire filtres depuis réponses questionnaire
-    buildFiltersFromAnswers(answers) {
-        const filters = {};
-        
-        // Genre
-        if (answers.genre && answers.genre !== 'all') {
-            filters.with_genres = answers.genre;
-        }
-        
-        // Année/décennie
-        if (answers.decade) {
-            const yearMap = {
-                '80s': { 'primary_release_year': 1980 },
-                '90s': { 'primary_release_year': 1990 },
-                '2000s': { 'first_air_date_year': 2000 },
-                '2010s': { 'first_air_date_year': 2010 },
-                '2020s': { 'primary_release_year': 2020 }
-            };
-            Object.assign(filters, yearMap[answers.decade] || {});
-        }
-        
-        // Humeur/ton
-        if (answers.mood) {
-            const moodMap = {
-                'action': { with_genres: '28', sort_by: 'vote_average.desc' },
-                'comedie': { with_genres: '35', sort_by: 'popularity.desc' },
-                'drama': { with_genres: '18', sort_by: 'vote_average.desc' },
-                'romance': { with_genres: '10749', sort_by: 'popularity.desc' },
-                'horreur': { with_genres: '27', sort_by: 'vote_count.desc' }
-            };
-            Object.assign(filters, moodMap[answers.mood] || {});
-        }
-        
-        // Durée (pour films)
-        if (answers.duration) {
-            const durationMap = {
-                'short': { 'with_runtime.lte': 90 },
-                'medium': { 'with_runtime.gte': 90, 'with_runtime.lte': 150 },
-                'long': { 'with_runtime.gte': 150 }
-            };
-            Object.assign(filters, durationMap[answers.duration] || {});
-        }
-        
-        return filters;
     }
 
     // Formatter les données
