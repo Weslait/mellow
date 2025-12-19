@@ -46,25 +46,25 @@ window.addEventListener("click", (event) => {
 // --- INSCRIPTION SIMPLE ---
 btnCreate.addEventListener("click", async () => {
   if (!btnCreate.classList.contains("active")) return;
-  
+
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
   const date = document.getElementById("date").value;
-  
+
   // Calculer l'âge
   const birthDate = new Date(date);
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
-  
+
   try {
     const response = await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password, age })
+      body: JSON.stringify({ username, password, age }),
     });
-    
+
     const data = await response.json();
-    
+
     if (response.ok) {
       alert("Inscription réussie !");
       // Rediriger vers la page d'accueil
@@ -80,18 +80,25 @@ btnCreate.addEventListener("click", async () => {
 // --- CONNEXION SIMPLE ---
 const btnConnect = document.querySelector(".btn-connect");
 btnConnect.addEventListener("click", async () => {
-  const loginUsername = document.querySelector(".popup-login input[type='text']").value;
-  const loginPassword = document.querySelector(".popup-login input[type='password']").value;
-  
+  const loginUsername = document.querySelector(
+    ".popup-login input[type='text']"
+  ).value;
+  const loginPassword = document.querySelector(
+    ".popup-login input[type='password']"
+  ).value;
+
   try {
     const response = await fetch("/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username: loginUsername, password: loginPassword })
+      body: JSON.stringify({
+        username: loginUsername,
+        password: loginPassword,
+      }),
     });
-    
+
     const data = await response.json();
-    
+
     if (response.ok) {
       alert("Connexion réussie !");
       overlay.style.display = "none";

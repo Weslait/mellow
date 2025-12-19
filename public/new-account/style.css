@@ -15,6 +15,10 @@
   background: var(--Foundation-green-green-500, #1c8582);
 }
 
+.link-decoration {
+  text-decoration: none;
+}
+
 .logo {
   color: var(--white, #fff);
   font-family: bagel-fat-one, sans-serif;
@@ -331,6 +335,16 @@ footer {
   padding: 0 16px;
   font-size: 20px;
   font-family: Aptos;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.45;
+}
+
+.logo:hover {
+  transform: scale(1.07);
+  color: #f8ce61;
 }
 
 .btn-connect {
